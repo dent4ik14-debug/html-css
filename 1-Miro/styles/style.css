@@ -7,3 +7,30 @@
     color: #4262FF;
     text-decoration: underline;
 }
+
+.uperPanel {
+    color: #050038;
+    font: Roboto;
+    font-weight: 400;
+    font-style: Regular;
+    size: 16px;
+    line-height: 24px;
+}
+
+.head {
+    color: #050038;
+    font: Roboto;
+    font-weight: 400;
+    font-style: Regular;
+    size: 48px;
+    line-height: 56px;
+}
+
+.txt {
+    color: #050038;
+    font: Roboto;
+    font-weight: 400;
+    font-style: Regular;
+    size: 18px;
+    line-height: 24px;
+}
