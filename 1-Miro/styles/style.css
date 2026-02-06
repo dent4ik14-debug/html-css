@@ -1,36 +1,107 @@
+/* Підключаємо шрифт, якщо він не підключений в HTML */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 #heroButton {
     background-color: #4262FF;
     color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-.bodyLink {
+#heroButton:hover { background-color: #122db6; }
+#heroButton:active { background-color: #071766; }
+
+.link {
     color: #4262FF;
     text-decoration: underline;
 }
 
-.uperPanel {
+.link:hover { color: #122db6; }
+
+/* Виправлені блоки тексту */
+.uperPanel, .HerroTxt, .SectionText {
     color: #050038;
-    font: Roboto;
     font-weight: 400;
-    font-style: Regular;
-    size: 16px;
     line-height: 24px;
 }
+
+.uperPanel { font-size: 16px; }
+.HerroTxt, .SectionText { font-size: 18px; }
 
 .head {
     color: #050038;
-    font: Roboto;
-    font-weight: 400;
-    font-style: Regular;
-    size: 48px;
+    font-size: 48px;
+    font-weight: 700; /* Для заголовків краще 700 */
     line-height: 56px;
 }
 
-.txt {
-    color: #050038;
-    font: Roboto;
-    font-weight: 400;
-    font-style: Regular;
-    size: 18px;
-    line-height: 24px;
+.HerroForm input:focus {
+    background-color: aliceblue;
+    outline: none;
 }
+
+nav ul {
+    list-style: none;
+    display: flex; /* Щоб меню було в рядок */
+    gap: 20px;
+    padding: 0;
+}
+
+/* Надійний спосіб для списку з галочками */
+.sectionList {
+    list-style: none;
+    padding: 0;
+}
+
+.sectionList li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    color: #050038;
+    font-size: 18px;
+}
+
+.sectionList li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 4px; /* Регулюйте, щоб вирівняти по висоті тексту */
+    width: 20px;
+    height: 20px;
+    background-image: url('../photo/check.svg'); /* Перевірте шлях! */
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/*
+обирає перший елемент зі списку
+ul li:first-child {  
+    color: red;
+}
+обирає останій елемент зі списку
+ul li:last-child {
+    color: red;
+}
+обирає перший n-ий зі списку
+ul li:nth-child(n+1) {
+    color:green
+}
+обирає елемент який не належить якомусь класу
+p:not(.SectionText) {
+    color: red;
+}
+обирає елемент після якогось можна створити
+a::after{
+    color:red;
+    content: " ! ";
+}
+обирає всі елементи і зміннює колір при виділені
+*::selection {
+    background-color: #122db6;
+}
+*/
