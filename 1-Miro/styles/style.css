@@ -78,6 +78,14 @@ nav ul {
     background-size: contain;
     background-repeat: no-repeat;
 }
+
+.experimentRed {
+    background: red;
+}
+
+.experimentBlue {
+    background: blue;
+}
 /*
 обирає перший елемент зі списку
 ul li:first-child {  
